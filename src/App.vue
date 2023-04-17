@@ -1,26 +1,52 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <router-view></router-view>
+    <p class="bg-primary">{{ test }}</p>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+// import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    // HelloWorld
+  },
+  data: () => ({
+      test : 'テスト',
+    }),
+    computed: {
+    },
+    methods: {
+      // testFunc() {
+      //   return false;
+      // },
+      // beforeEnter(el)   {},
+      // enter(el, done)   {},
+      // afterEnter()    {},
+      // enterCancelled(){},
+      // beforeLeave()   {},
+      // leave(el, done)         {},
+      // afterLeave()    {},
+      // leaveCancelled(){},
+    },
   }
-}
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style scoped>
+
+
+  /* 
+  .__-enter-from {}
+  .__-enter-active {}
+  .__-enter-to {}
+  .__-leave-from {}
+  .__-leave-active {}
+  .__-leave-to {}
+  @keyframes __-in {
+    from {}
+    to {}
+  }
+   */
 </style>
